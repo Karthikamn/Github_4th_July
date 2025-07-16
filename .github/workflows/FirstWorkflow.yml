@@ -1,0 +1,20 @@
+name: First Workflow
+
+on: push
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Step 1
+     run: echo 'Step 1'
+   - name: Step 2
+     run: echo 'Step 2'
+ test:
+  runs-on: windows-latest
+  steps:
+   - name: Step 1
+     run: echo 'Step 1'
+   - name: Step 2
+     run: echo 'Step 2'
+  
