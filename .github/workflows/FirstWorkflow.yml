@@ -9,7 +9,7 @@ jobs:
  build:
   strategy:
    matrix:
-     java-version: [17,21]
+     java-version: [17,21,26]
   runs-on: ubuntu-latest
   steps:
    - name: Step 1
