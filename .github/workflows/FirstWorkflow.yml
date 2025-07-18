@@ -7,6 +7,9 @@ on:
 
 jobs:
  build:
+  strategy:
+   matrix:
+     java-version: [17,21]
   runs-on: ubuntu-latest
   steps:
    - name: Step 1
@@ -16,7 +19,7 @@ jobs:
    - name: Setup Java JDK
      uses: actions/setup-java@v3.14.1
      with:
-       java-version: 17
+       java-version: ${{matrix.java-version}}
        distribution: microsoft
    - name: Java Version check
      run: echo java --version
