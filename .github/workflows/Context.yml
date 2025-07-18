@@ -1,0 +1,16 @@
+name: Context
+
+on:
+ workflow_dispatch
+jobs:
+ print:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Print Info
+     run: |
+      echo 'event that triggered this workflow ${{github.event_name}}'
+      echo 'Actor - user who has triggered ${{github.actor}}'
+      echo 'SHA value ${{github.sha}}'
+      echo 'header details ${{github.ref}}'
+      echo 'Runner id ${{github.run_id}}'
+      echo 'runner number is ${{github.run_number}}'
