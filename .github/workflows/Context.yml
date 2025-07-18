@@ -14,3 +14,4 @@ jobs:
       echo 'header details ${{github.ref}}'
       echo 'Runner id ${{github.run_id}}'
       echo 'runner number is ${{github.run_number}}'
+      echo '${{github.triggering_actor}}'
