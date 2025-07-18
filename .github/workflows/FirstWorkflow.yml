@@ -26,6 +26,7 @@ jobs:
      run: echo java --version
      
  test:
+  needs: build
   runs-on: windows-latest
   steps:
    - name: Step 1
