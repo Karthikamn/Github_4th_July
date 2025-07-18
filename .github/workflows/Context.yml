@@ -2,11 +2,18 @@ name: Context
 
 on:
  workflow_dispatch
+env:
+ MY_VAR: 'workflow'
 jobs:
  print:
+  env:
+   MY_VAR: 'jobs'
   runs-on: ubuntu-latest
   steps:
+    
    - name: Print Info
+     env:
+      MY_VAR: 'steps'
      run: |
       echo 'event that triggered this workflow ${{github.event_name}}'
       echo 'Actor - user who has triggered ${{github.actor}}'
@@ -15,3 +22,4 @@ jobs:
       echo 'Runner id ${{github.run_id}}'
       echo 'runner number is ${{github.run_number}}'
       echo '${{github.triggering_actor}}'
+      echo 'ENV var is ${{env.MY_VAR}}'
