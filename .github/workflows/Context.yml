@@ -6,9 +6,13 @@ env:
  MY_VAR: 'workflow'
 jobs:
  print:
-  env:
-   MY_VAR: 'jobs'
-  runs-on: ubuntu-latest
+  strategy:
+   matrix:
+    os:
+    - ubuntu-latest
+    - windows-latest
+
+  runs-on: ${{matrix.os}}
   steps:
     
    - name: Print Info
@@ -24,3 +28,4 @@ jobs:
       echo '${{github.triggering_actor}}'
       echo 'ENV var is ${{vars.MY_VAR}}'
       echo 'Secret is ${{secrets.PAT}}'
+      echo 'Matrix value ${{matrix.os}}'
