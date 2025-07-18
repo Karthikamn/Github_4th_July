@@ -8,6 +8,7 @@ on:
 jobs:
  build:
   strategy:
+   fail-fast: true
    matrix:
      java-version: [17,21,26]
   runs-on: ubuntu-latest
