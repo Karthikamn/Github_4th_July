@@ -22,4 +22,4 @@ jobs:
       echo 'Runner id ${{github.run_id}}'
       echo 'runner number is ${{github.run_number}}'
       echo '${{github.triggering_actor}}'
-      echo 'ENV var is ${{env.MY_VAR}}'
+      echo 'ENV var is ${{vars.MY_VAR}}'
