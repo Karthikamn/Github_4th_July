@@ -1,6 +1,6 @@
 name: Env
 
-
+run-name: DEBUG | ${{inputs.debug}}
 on:
  workflow_dispatch:
   inputs:
