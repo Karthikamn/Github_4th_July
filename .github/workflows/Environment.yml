@@ -7,6 +7,9 @@ on:
    TAR_ENV:
     type: environment
     default: staging
+   debug:
+    type: boolean
+    default: false
 jobs:
  env-info:
   runs-on: ubuntu-latest
